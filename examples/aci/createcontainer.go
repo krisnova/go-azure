@@ -18,11 +18,11 @@ func main() {
 
 	client := aci.NewClient(auth)
 
-	input := &aci.CreateContainerInput{
+	input := aci.CreateContainerRequest{
 	// TODO define container information here
 	}
 
-	output, err := client.Create(input)
+	output, err := client.Create(&input)
 
 	if err != nil {
 		log.Fatalf(err.Error())

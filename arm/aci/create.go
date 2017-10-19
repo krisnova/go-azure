@@ -1,12 +1,15 @@
 package aci
 
-type CreateContainerInput struct {
+import "github.com/kris-nova/go-azure/arm"
+
+type CreateContainerRequest struct {
 }
 
-type CreateContainerOutput struct {
+type CreateContainerResponse struct {
+	arm.HTTPResponse
 }
 
-func (c *Client) Create(input *CreateContainerInput) (*CreateContainerOutput, error) {
+func (c *Client) Create(Request *CreateContainerRequest) (*CreateContainerResponse, error) {
 
-	return &CreateContainerOutput{}, nil
+	return &CreateContainerResponse{}, nil
 }

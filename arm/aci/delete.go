@@ -1,12 +1,15 @@
 package aci
 
-type DeleteContainerInput struct {
+import "github.com/kris-nova/go-azure/arm"
+
+type DeleteContainerRequest struct {
 }
 
-type DeleteContainerOutput struct {
+type DeleteContainerResponse struct {
+	arm.HTTPResponse
 }
 
-func (c *Client) Create(input *DeleteContainerInput) (*DeleteContainerOutput, error) {
+func (c *Client) Delete(Request *DeleteContainerRequest) (*DeleteContainerResponse, error) {
 
-	return &DeleteContainerOutput{}, nil
+	return &DeleteContainerResponse{}, nil
 }

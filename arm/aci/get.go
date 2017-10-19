@@ -1,12 +1,15 @@
 package aci
 
-type GetContainerInput struct {
+import "github.com/kris-nova/go-azure/arm"
+
+type GetContainerRequest struct {
 }
 
-type GetContainerOutput struct {
+type GetContainerResponse struct {
+	arm.HTTPResponse
 }
 
-func (c *Client) Get(input *GetContainerInput) (*GetContainerOutput, error) {
+func (c *Client) Get(Request *GetContainerRequest) (*GetContainerResponse, error) {
 
-	return &GetContainerOutput{}, nil
+	return &GetContainerResponse{}, nil
 }
